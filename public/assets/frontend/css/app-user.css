@@ -1,0 +1,37 @@
+.usr_menu_wrap, .usr_content_wrap {
+
+}
+
+.usr_menu_box{
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.usr_content_box {
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.step-title {
+    margin-top: 0px !important;
+    font-weight: bold;
+}
+
+.usr_table thead th {
+    font-weight: 600;
+    border: 0;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.usr_table tbody tr td {
+    border-top: 1px solid #ddd;
+    vertical-align: middle;
+    padding: 2rem 1.5rem;
+}

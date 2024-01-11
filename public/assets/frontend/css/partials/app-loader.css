@@ -1,0 +1,21 @@
+.app-loading:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    z-index: 1;
+    background: var(--app-bg-color) url(../../image/loader.svg) no-repeat 50% 50% !important;
+}
+
+body.app-loading {
+    overflow: hidden;
+}
+
+body.app-loading:before {
+    position: fixed !important;
+    z-index: 99999;
+}

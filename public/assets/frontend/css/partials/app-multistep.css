@@ -1,0 +1,80 @@
+/*https://codepen.io/marcodejong/pen/xOvmqK*/
+
+.app-multi-step {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    color: #929292;
+    height: 4rem;
+}
+
+.app-multi-step>li {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    font-size: 14px;
+}
+
+.app-multi-step>li:before {
+    content: attr(data-step);
+    display: block;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 2px solid #e6e6e6;
+    color: #e6e6e6;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.9rem;
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.app-multi-step>li:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #e6e6e6;
+    width: 100%;
+    height: 0.125rem;
+    top: 1rem;
+    left: 50%;
+}
+
+.app-multi-step>li:last-child:after {
+    display: none;
+}
+
+.app-multi-step>li.is-complete {
+    /*color: #a2a2a2;*/
+}
+
+.app-multi-step>li.is-complete:before {
+    content: '\2713';
+    color: var(--app-primary);
+    background: #fff;
+    border: 2px solid var(--app-primary);
+}
+
+.app-multi-step>li.is-complete:after {
+    background: var(--app-primary);
+}
+
+.app-multi-step>li.is-active {
+    font-weight: bold;
+    color: #000;
+}
+
+.app-multi-step>li.is-active:before {
+    color: #ffffff;
+    border: 2px solid var(--app-primary);
+    background: var(--app-primary);
+    margin-bottom: 10px;
+}

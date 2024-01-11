@@ -1,0 +1,21 @@
+.app-invalid {
+
+}
+
+.app-invalid label {
+    color: var(--app-danger) !important;
+}
+
+.app-invalid .form-control, .form-control.is-invalid {
+    border: 2px solid var(--app-danger) !important;
+}
+
+.app-invalid .form-control:focus, .form-control.is-invalid:focus {
+    border: 2px solid var(--app-danger) !important;
+}
+
+.invalid-feedback {
+    color: var(--app-danger) !important;
+    font-weight: bold;
+    font-size: 12px;
+}

@@ -1,0 +1,158 @@
+.btn {
+    position: relative;    
+    display: inline-block;
+    color: #fff !important;
+    background-color: #666;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 16px;
+    border: 2px;
+    border-style: solid;
+    border-color: #666;
+    outline: none !important;
+    box-shadow: none !important;
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn:active::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+.btn-lg {
+    padding: 12px 35px !important;
+    font-size: 20px !important;
+}
+
+.btn-md {
+    padding: 5px 25px !important;
+    font-size: 18px !important;
+}
+
+.btn-sm {
+    padding: 3px 10px !important;
+    font-size: 12px !important;
+}
+
+.btn-xs {
+    padding: 1px 5px !important;
+    font-size: 75%;
+    line-height: 1;
+}
+
+.btn-badge-xs {
+    padding: 1px 3px !important;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.btn-rounded {
+    border-radius: 20px;
+}
+
+.btn-primary {
+    border-color: var(--app-primary) !important;
+    background-color: var(--app-primary) !important;
+}
+
+.btn-success {
+    border-color: var(--app-success) !important;
+    background-color: var(--app-success) !important;
+}
+
+.btn-info {
+    border-color:var(--app-info) !important;
+    background-color: var(--app-info) !important;
+}
+
+.btn-warning {
+    border-color: var(--app-warning) !important;
+    background-color: var(--app-warning) !important;
+}
+
+.btn-danger {
+    border-color: var(--app-danger) !important;
+    background-color: var(--app-danger) !important;
+}
+
+.btn-default {
+    border-color: var(--app-default) !important;
+    background-color: var(--app-default) !important;
+}
+
+.btn-outline {
+    color: #666 !important;
+    border-color: #666 !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-primary {
+    color: var(--app-primary) !important;
+    border-color: var(--app-primary) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-success {
+    color: var(--app-success) !important;
+    border-color: var(--app-success) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-info {
+    color: var(--app-info) !important;
+    border-color: var(--app-info) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-warning {
+    color: var(--app-warning) !important;
+    border-color: var(--app-warning) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-danger {
+    color: var(--app-danger) !important;
+    border-color: var(--app-danger) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-default {
+    color: var(--app-default) !important;
+    border-color: var(--app-default) !important;
+    background-color: transparent !important;
+}

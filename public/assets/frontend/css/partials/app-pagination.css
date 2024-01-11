@@ -1,0 +1,90 @@
+.pagination {
+    border-radius: 0;
+    font-weight: 500;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.pagination-center .pagination {
+    justify-content: center;
+}
+
+.page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: .2rem .3rem 0;
+    line-height: 1.1;
+    color: #706f6c;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+.page-link.page-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    min-width: 0;
+    height: 3.2rem;
+    border: 0;
+    padding: 0;
+    color: #6f6e6b;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+.page-link.page-link-btn:hover,
+.page-link.page-link-btn:focus {
+    color: var(--app-primary);
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.page-link.page-link-btn i {
+    position: relative;
+    top: -.1rem;
+}
+
+.page-link.page-link-btn i::before {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.page-link:hover,
+.page-link:focus {
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+    border-color: var(--app-primary);
+    background-color: var(--app-primary);
+}
+
+.page-item+.page-item {
+    margin-left: .7rem;
+}
+
+.page-item span {
+    padding-left: .3rem;
+    padding-right: .3rem;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: var(--app-primary);
+    border-color: transparent;
+}
+
+.page-item.disabled .page-link {
+    color: #ddd;
+}
+
+.page-item.disabled .page-link.page-link-btn {
+    color: #ddd;
+    background-color: transparent;
+}

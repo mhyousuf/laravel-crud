@@ -1,0 +1,254 @@
+.app-menu {
+    position: fixed;
+    z-index: 8;
+    min-height: 100%;
+    background: var(--app-wrap-bg-color);
+    /*overflow-x: hidden;
+    overflow-y: auto;*/
+    transition: var(--app-transition);
+    top: var(--app-header-height);
+}
+
+.app-menu-toggle, .app-menu-modal-toggle, .app-menu-mobile-toggle {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.app-menu-mobile-toggle {
+    display: block;
+}
+
+.app-menu-mobile-open {
+    left: 0px !important;
+}
+
+/*menu Header*/
+.app-menu-header {
+    text-align: center;
+    border-bottom: 1px solid var(--app-highlight-color);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.app-text-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.app-menu-header-img {
+    width: 65px;
+    height: 65px;
+    border: 1px solid var(--app-highlight-color);
+    border-radius: 50%;
+    margin: 5px 0px;
+    padding: 3px;
+}
+
+.app-menu-header-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*menu Body*/
+.app-menu-body {
+    position: relative;
+}
+
+.app-navbar {
+
+}
+
+.app-navbar li {
+    transition: var(--app-transition);
+    padding: 0px 10px;
+}
+
+.app-navbar li.active > a {
+    color: var(--app-primary);
+}
+
+.app-navbar li a {
+    color: var(--app-color);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: var(--app-transition);
+    font-weight: bold;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.app-navbar li a .icon {
+    font-size: 25px;
+    display: inline-block;
+    width: 35px;
+    transition: var(--app-transition);
+}
+
+.app-navbar li a img.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.app-navbar li a:hover {
+    color: var(--app-primary);
+}
+
+.app-navbar li a.is-children:before {
+    position: absolute;
+    right: 10px;
+    display: block;
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 12px;
+    content: "\f105";
+    transition: var(--app-transition);
+}
+
+.app-navbar li a.is-children-open:before {
+    position: absolute;
+    right: 10px;
+    display: block;
+    font-family: 'Line Awesome Free';
+    font-weight: 900;
+    font-size: 12px;
+    content: "\f105";
+    transform: rotate(90deg);
+}
+
+
+/*Child Menu*/
+.app-navbar li.active > .app-children-nav {
+    display: block;
+}
+
+.app-children-nav {
+    margin-left: 20px;
+    display: none;
+}
+
+.app-children-nav li {
+    
+}
+
+.app-children-nav li a {
+    
+}
+
+.app-children-nav li a .icon {
+    font-size: 12px;
+    width: 20px;
+}
+
+/*menu-Mini*/
+.app-menu-mini {
+
+}
+
+.app-menu-mini .app-menu-header .app-text-logo, .app-menu-mini .app-menu-header .app-menu-header-text {
+    display: none;
+}
+
+.app-menu-mini .app-navbar {
+
+}
+
+.app-menu-mini .app-navbar>li {
+    position: relative;
+}
+
+.app-menu-mini .app-navbar>li>a {
+    justify-content: center;
+}
+
+.app-menu-mini .app-navbar>li>a>.icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 35px;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    background: var(--app-highlight-color);
+}
+
+.app-menu-mini .app-navbar>li.active>a>.icon {
+    background: var(--app-primary);
+    color: #fff;
+    box-shadow: 0px 0px 20px 0px #999;
+}
+
+.app-menu-mini .app-children-nav>li>a {
+    justify-content: start;
+}
+
+.app-menu-mini .app-children-nav>li>a .icon {
+    display: inline-block;
+    font-size: 12px;
+    width: 20px;
+    height: auto;
+    color: var(--app-color);
+    background: none;
+    border-radius: 0px;
+}
+
+.app-menu-mini .app-navbar>li>a:before, .app-menu-mini .app-navbar>li>a>span {
+    display: none;
+}
+
+.app-menu-mini .app-navbar>li>a>span, .app-menu-mini .app-navbar>li>.app-children-nav {
+    display: none !important;
+    position: absolute;
+    width: var(--app-menu-width);
+    left: var(--app-menu-mini-width);
+    z-index: 999999;
+}
+
+.app-menu-mini .app-navbar>li:hover>a>span {
+    display: block !important;
+    margin-top: 0px;
+    padding: 12px 5px 12px 20px;
+    background-color: var(--app-highlight-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.app-menu-mini .app-navbar>li>a.is-children span {
+    border-bottom-right-radius: 0px;
+}
+
+.app-menu-mini .app-navbar>li:hover>.app-children-nav {
+    display: block !important;
+    margin-top: -11px !important;
+    margin-left: 0px;
+    background-color: var(--app-highlight-color);
+    padding-left: 15px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 767px)
+{
+    .app-menu-toggle {
+        display: none !important;
+    }
+
+    .app-menu-mobile-toggle {
+        display: inherit !important;
+    }
+
+    .app-menu {
+        height: calc(100% - var(--app-header-height) * 2);
+        left: -300px;
+        top: calc(var(--app-header-height) * 2);
+    }
+
+    .app-menu-header .app-text-logo {
+        display: none;
+    }
+
+    .app-main {
+        margin-left: 0px !important;
+    }
+}

@@ -1,0 +1,71 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--app-bg-color);
+    color: var(--app-color);
+    font-family: var(--app-font-family) !important;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--app-primary);
+}
+
+a:hover {
+    color: var(--app-primary);
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--app-highlight-color) !important;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    height: 20px;
+    background: var(--app-primary) !important;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--app-primary) !important;
+}
+
+.app-default-layout .app-menu {
+    width: var(--app-menu-width);
+}
+
+.app-menu-mini-layout .app-menu {
+    width: var(--app-menu-mini-width);
+}
+
+.app-default-layout .app-main {
+    margin-left: var(--app-menu-width);
+}
+
+.app-menu-mini-layout .app-main {
+    margin-left: var(--app-menu-mini-width);
+}
+
+.app-main {
+    transition: var(--app-transition);
+}
+
+.app-collapse {
+    display: none;
+}

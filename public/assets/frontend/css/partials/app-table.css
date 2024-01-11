@@ -1,0 +1,257 @@
+.app-table-wrap {
+    position: relative;
+    min-height: 300px;
+}
+
+.app-table-wrap .table-responsive {
+   
+}
+
+.app-table {
+    position: relative;
+    border-collapse: collapse !important;
+    width: 100%;
+    color: var(--app-color);
+}
+
+.app-table .tbl-all-check {
+    margin-left: 5px;
+}
+
+.app-table-action-wrap {
+    display: inline-flex;
+    align-items: center;
+}
+
+.app-table-action {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.app-table-action-icon {
+    /* color: var(--app-table-action-color) !important; */
+    font-size: 22px !important;
+}
+
+.app-table thead {
+    background: var(--app-highlight-color);
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.app-table thead tr {
+    
+}
+
+.app-table thead tr th {
+    border: none !important;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.app-table thead tr th:active {
+    /*box-shadow: 0px 5px 12px rgba(126,142,177,0.2), 0px 0px 0px 2px var(--app-primary);*/
+    /* border: 2px solid var(--app-primary) !important; */
+}
+
+.app-table tbody {
+
+}
+
+.app-table tbody tr {
+    /*cursor: pointer;*/
+    transition: var(--app-transition);
+}
+
+.app-table tbody tr:hover {
+    box-shadow:0px 0px 20px var(--app-highlight-color);
+}
+
+.app-table tbody tr td {
+    font-size: 14px;
+}
+
+.app-table th, .app-table td {
+    padding: 15px 5px;
+    vertical-align: middle;
+    border: none !important;
+}
+
+.app-table tr.tbl-checked, .app-table tr.tbl-checked:hover {
+    background: var(--app-highlight-color) !important;
+    box-shadow: 0 -2px 2px -2px var(--app-primary);
+}
+
+/* Filter */
+.app-dt-filter {
+    background: var(--app-bg-color);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+/*DataTable*/
+.dataTables_length label, .dataTables_info, .dataTables_filter label, .dataTables_paginate {
+    font-weight: bold !important;
+}
+
+.dataTables_length, .dataTables_info {
+    padding-left: var(--app-layout-padding);
+}
+
+.dataTables_filter, .dataTables_paginate {
+    padding-right: var(--app-layout-padding);
+}
+
+.app-layout-padding .dataTables_length, .app-layout-padding .dataTables_info, .app-layout-padding .dataTables_filter, .app-layout-padding .dataTables_paginate {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.dataTables_empty {
+    color: var(--app-danger) !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
+
+/*DataTable Pagination*/
+.dataTables_paginate {
+
+}
+
+.dataTables_paginate ul.pagination {
+    margin: 12px 0px 5px 0px !important;
+    white-space: nowrap; 
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.dataTables_paginate .page-item {
+
+}
+
+.dataTables_paginate .page-item .page-link {
+    position: relative;
+    display: block;
+    padding: .3rem .65rem;
+    margin: 0px 5px;
+    line-height: 1.25;
+    color: var(--app-color) !important;
+    background: var(--app-highlight-color) !important;
+    border-radius: 5px;
+    border: none !important;
+    box-shadow: none !important;
+    background-position: center;
+    overflow: hidden;
+}
+
+.dataTables_paginate .page-item .page-link:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.dataTables_paginate .page-item .page-link:active::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+.dataTables_paginate .page-item.disabled .page-link {
+    opacity: 0.5;
+}
+
+.dataTables_paginate .page-item.active .page-link {
+    color: #fff !important;
+    background: var(--app-primary) !important;
+    /*background: none !important;*/
+}
+
+.dataTables_paginate .page-item:first-child .page-link {
+    border-radius: 10px !important;
+    margin-right: 5px;
+}
+
+.dataTables_paginate .page-item:last-child .page-link {
+    border-radius: 10px !important;
+    margin-left: 5px;
+}
+
+/*DataTable Pagination Responsive*/
+@media only screen and (max-width:768px) {
+    .dataTables_paginate ul.pagination {
+        -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+    }
+}
+
+/* ColVis */
+div.dt-button-background {
+    background: none;
+    /*background: var(--app-overlay-color) !important;*/
+}
+
+div.dt-button-collection {
+    position: absolute;
+    margin-top: 0px !important;
+    top: 50px !important;
+    left: 50% !important;
+}
+
+div.dt-button-collection div.dropdown-menu {
+    width: 250px;
+    padding: 10px;
+}
+
+div.dt-button-collection a.dt-button {
+    border-radius: 5px !important;
+    text-decoration: none;
+    margin-bottom: 10px;
+    box-shadow: none !important;
+    border: none !important;
+    background-image: none !important;
+    background: var(--app-highlight-color) !important;
+    color: var(--app-color);
+}
+
+div.dt-button-collection a.dt-button:last-child {
+    margin-bottom: 0px;
+}
+
+div.dt-button-collection a.dt-button a {
+    font-weight: bold;
+    color: var(--app-color);
+}
+
+div.dt-button-collection a.dt-button.active:not(.disabled) {
+    background-image: none !important;
+    background: var(--app-primary) !important;
+    color: #fff !important;
+}
+
+div.dt-button-collection a.dt-button.active:not(.disabled) a {
+    color: #fff !important;
+}

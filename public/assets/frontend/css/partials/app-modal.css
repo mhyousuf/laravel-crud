@@ -1,0 +1,202 @@
+/*===================================================================================================================
+                                                Bootstrap Modal
+====================================================================================================================*/
+.app-modal {
+
+}
+
+.modal {
+    background: var(--app-overlay-color);
+}
+
+.modal-dialog {
+
+}
+
+.modal-content {
+    background: var(--app-wrap-bg-color) !important;
+    overflow: hidden;
+    border: none !important;
+}
+
+.modal-content:before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    
+    /*height: 55px;
+    background: var(--app-bg-color);
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+    transform: scale(1.5);*/
+
+    /*height: 100%;
+    background-image: url(../../image/modal-bg.png);
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;*/
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none !important;
+    z-index: 9;
+}
+
+.modal-title {
+    font-weight: bold;
+    color: var(--app-primary) !important;
+}
+
+.modal-header .close {
+    color: var(--app-color) !important;
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 18px;
+}
+
+.modal-header .close:hover {
+    color: var(--app-primary) !important;
+}
+
+.modal-body {
+    padding-top: 0px; 
+    padding-bottom: 0px; 
+}
+
+
+.modal-footer {
+    border: none !important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background: var(--app-overlay-color);
+    display: none;
+}
+
+/*Bootstrap Left/Right Modal*/
+.modal.left .modal-dialog, .modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content, .modal.right .modal-content {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    border-radius: 0px !important;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+    left: -320px;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.show .modal-dialog {
+    left: 0;
+}
+    
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.show .modal-dialog {
+    right: 0;
+}
+
+/*===================================================================================================================
+                                                Izi Modal
+====================================================================================================================*/
+.iziModal {
+    border: none !important;
+    box-shadow: none !important;
+    background: var(--app-wrap-bg-color) !important;
+}
+
+.iziModal-header {
+    color: var(--app-primary) !important;
+    background: var(--app-wrap-bg-color) !important;
+    box-shadow: none !important;
+}
+
+.iziModal .iziModal-header.iziModal-noSubtitle {
+    padding-top: 50px;
+}
+
+.iziModal .iziModal-header-icon {
+    color: var(--app-primary) !important;
+}
+
+.iziModal .iziModal-header-title {
+    color: var(--app-primary) !important;
+}
+
+.iziModal .iziModal-header-subtitle {
+    color: var(--app-primary) !important;   
+}
+
+.iziModal .iziModal-button-fullscreen, .iziModal .iziModal-button-close {
+    opacity: 1 !important;
+    background: none !important;
+    transform: none !important;
+    color: var(--app-color) !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Line Awesome Free';
+}
+
+.iziModal .iziModal-button-fullscreen:before {
+    content: "\f065";
+}
+
+.iziModal .iziModal-button-close:before {
+    content: "\f00d";
+}
+
+
+.iziModal .iziModal-button-fullscreen:hover, .iziModal .iziModal-button-close:hover {
+    color: var(--app-primary) !important;
+}
+
+.iziModal-wrap {
+
+}
+
+.iziModal-content {
+    padding: 5px 15px 15px 15px !important;
+    min-height: 100px;
+}
+
+.iziModal-loader {
+    background: var(--app-bg-color) url(../../image/loader.svg) no-repeat 50% 50% !important;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+}
+
+.iziModal-overlay {
+    background: var(--app-overlay-color) !important;
+}
+
+.app-izi-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

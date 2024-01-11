@@ -1,0 +1,566 @@
+/*===================================================================================================================
+                                                Common
+====================================================================================================================*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    color: var(--app-color) !important;
+    caret-color: var(--app-color) !important;
+    -webkit-text-fill-color: var(--app-color) !important;
+    background-color: transparent !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.app-form .form-group {
+    margin: 0px 0px;
+    margin-bottom: 10px;
+}
+
+.app-form label, .cke_dialog_body label {
+    color: var(--app-color) !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin: 0px !important;
+    cursor: pointer !important;
+    margin-bottom: 5px !important;
+}
+
+.app-form label .fill {
+    color: var(--app-danger) !important;
+}
+
+.label-right {
+    float: right;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.app-form .form-control, .form-control, .select2-container .select2-selection, .select2-search--dropdown .select2-search__field, .bootstrap-tagsinput, input.cke_dialog_ui_input_text, select.cke_dialog_ui_input_select {
+    width: 100%;
+    min-height: 40px !important;
+    display: block;
+    color: var(--app-color) !important;
+    background-color: var(--app-input-bg-color) !important;
+    border: 2px solid var(--app-input-border-color) !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 8px 15px;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+}
+
+.app-form .form-control:focus, .form-control:focus, .select2-selection:focus, .select2-search--dropdown .select2-search__field:focus, input.cke_dialog_ui_input_text:focus, select.cke_dialog_ui_input_select:focus {
+    border-color: var(--app-primary) !important;
+    outline: none !important;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.15) !important;
+}
+
+.app-form .app-otp-form-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-form .app-otp-input {
+    width: 38px;
+    border-radius: 5px !important;
+    text-align: center;
+    margin: 0px 8px;
+    transition: all .1s ease-out;
+}
+
+.app-form .app-otp-input:focus {
+    transform: scale(1.2);
+}
+
+.app-form .app-otp-input.verified {
+    color: #66bb6a !important;
+}
+
+input {
+    color: var(--app-color) !important;
+}
+
+input[type=file] {
+    padding-top: 4px !important;
+}
+
+select, input[type=checkbox], input[type=radio]{
+    cursor: pointer;
+    outline: none !important;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/*===================================================================================================================
+                                                DatePicker
+====================================================================================================================*/
+.datepicker table {
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    font-size: 14px;
+}
+
+/*Today Highlight*/
+.datepicker table tr td.today:not(.active) {
+    background-image: none !important;
+    background-color: var(--app-primary) !important;
+    color: #fff !important;
+    opacity: 0.3;
+}
+
+/*Active*/
+.datepicker table tr td.active {
+    background-image: none !important;
+    background-color: var(--app-primary) !important;
+    color: #fff !important;
+}
+
+/*Btns*/
+.datepicker .dow {
+
+}
+
+.datepicker .datepicker-days td, .datepicker th:not(.datepicker-switch) {
+    width: 30px !important;
+    height: 30px;
+    background: var(--app-highlight-color);
+    border: none !important;
+    border-radius: 50% !important;
+    font-weight: bold;
+}
+
+.datepicker table tr td span {
+    width: 49px !important;
+    height: 49px;
+    background: var(--app-highlight-color);
+    padding: 0px 0px !important;
+    border: none !important;
+    border-radius: 50% !important;
+    font-weight: bold;
+}
+
+.datepicker table tr td span.focused:not(.active) {
+    background-image: none !important;
+    background-color: var(--app-primary) !important;
+    color: #fff;
+    opacity: 0.3;
+}
+
+.datepicker table tr td.day.focused, .datepicker table tr td.day:hover, .datepicker table tr td span.focused, .datepicker table tr td span:hover {
+    color: #000;
+}
+
+.datepicker table tr td span.active {
+    background-image: none !important;
+    background-color: var(--app-primary) !important;
+    color: #fff !important;
+}
+
+
+.datepicker .datepicker-switch {
+    background: var(--app-highlight-color) !important;
+}
+
+/*===================================================================================================================
+                                                TimePicker
+====================================================================================================================*/
+.bootstrap-timepicker-hour, .bootstrap-timepicker-minute, .bootstrap-timepicker-meridian {
+    width: 40px !important;
+    height: 40px;
+    background: var(--app-input-bg-color);
+    border: 1px solid var(--app-input-border-color) !important;
+    border-radius: 50% !important;
+    outline: none;
+    box-shadow: none;
+    color: var(--app-color) !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.bootstrap-timepicker-meridian {
+    pointer-events: none;
+    color: var(--app-color) !important;
+    border: 1px solid var(--app-disable-border-color) !important;
+    background: var(--app-disable-bg-color) !important;
+}
+
+.bootstrap-timepicker-widget table td a {
+    color: var(--app-color) !important;
+    font-weight: bold;    
+    background: none !important;
+    width: 40px !important;
+    padding: 4px 0px !important;
+    border: none !important;   
+}
+
+.bootstrap-timepicker-widget table td a:hover {
+    color: var(--app-primary) !important;
+}
+
+.bootstrap-timepicker-widget table td.separator {
+    font-weight: bold;
+}
+
+/*===================================================================================================================
+                                                Date Range Picker
+====================================================================================================================*/
+.daterangepicker {
+    font-family: var(--app-font-family) !important;
+    background: var(--app-wrap-bg-color) !important;
+    font-weight: bold;
+}
+
+.daterangepicker .calendar-table {
+    border: none !important;
+    background: var(--app-wrap-bg-color) !important;
+}
+
+.daterangepicker .drp-calendar {
+
+}
+
+.daterangepicker .drp-calendar.left {
+    padding: 5px 5px 5px 0px !important;
+    border-right: 1px solid #eee;
+}
+
+.daterangepicker .drp-calendar.right {
+    padding: 5px 0px 5px 5px !important;
+}
+
+.daterangepicker .calendar-table table {
+    border-collapse: separate;
+    border-spacing: 5px 5px;
+    font-size: 14px;
+    font-family: var(--app-font-family) !important;
+}
+
+.daterangepicker .calendar-table th:not(.month):not(:empty), .daterangepicker .calendar-table td {
+    width: 30px !important;
+    height: 30px;
+    background: var(--app-highlight-color);
+    border: none !important;
+    border-radius: 50% !important;
+    font-weight: bold;
+}
+
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+    color: #000;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover, .daterangepicker td.in-range, .daterangepicker td.in-range:hover {
+    background: var(--app-primary);
+    color: #fff !important;
+}
+
+.daterangepicker .calendar-time {
+    padding: 8px;
+}
+
+.daterangepicker .ranges li:hover {
+    background: var(--app-highlight-color) !important;
+}
+
+.daterangepicker .ranges li.active {
+    background: var(--app-primary);
+    color: #fff;
+}
+
+.app-report-range {
+    display: inline-flex;
+}
+
+.app-report-range i {
+    font-size: 24px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+/*===================================================================================================================
+                                                Select2
+====================================================================================================================*/
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-container .select2-selection .select2-selection__rendered {
+    padding: 0px;
+    margin: 0px;
+    line-height: initial;
+    color: var(--app-color) !important;
+}
+
+.select2-container .select2-selection .select2-selection__arrow {
+    top: 7px;
+}
+
+.select2-dropdown {
+    border: none;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    background: var(--app-wrap-bg-color) !important;
+}
+
+.select2-search--dropdown {
+    padding: 7px 10px !important;
+}
+
+.select2-search__field {
+    padding: 8px 20px !important;
+}
+
+.select2-results {
+
+}
+
+.select2-results__option {
+    font-weight: bold;
+    padding: 7px 10px;
+}
+
+.select2-container .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: var(--app-primary) !important;
+}
+
+.select2-container .select2-results__option--selected {
+    background-color: var(--app-highlight-color) !important;
+}
+
+.select2-results__message {
+    color: var(--app-danger);
+    padding: 7px 10px;
+}
+
+/*.select2-selection--multiple {
+    padding: 8px 20px !important;
+}*/
+
+.select2-selection--multiple .select2-search__field {
+    /*width: 100% !important;*/
+    height: auto !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--app-primary);
+    border: none;
+    margin-top: 0px;
+    margin-right: 5px;
+    margin-left: 0px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 5px 2px 5px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border-right: none;
+    color: #fff !important;
+    background: none !important;
+}
+
+/*===================================================================================================================
+                                                Bootstrap Tagsinput
+====================================================================================================================*/
+.bootstrap-tagsinput .tag {
+    background: var(--app-primary);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*===================================================================================================================
+                                                Ckeditor
+====================================================================================================================*/
+.cke_reset {
+    width: 100% !important;
+}
+
+.cke_editor_editor {
+    border: 2px solid var(--app-highlight-color) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    font: inherit !important;
+}
+
+.cke:not(.cke_editor_editor) {
+    border: none !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    font: inherit !important;
+}
+
+.cke_top {
+    border-bottom: 1px solid #eee !important;
+    background: #fff !important;
+    padding: 14px 15px 10px !important;
+}
+
+.cke_bottom {
+    border-top: 1px solid #eee !important;
+    background: #fff !important;
+    padding: 14px 15px 10px !important;
+}
+
+.cke_resizer {
+    border-color: transparent var(--app-primary) transparent transparent !important;
+}
+
+.cke_reset_all, .cke_reset_all *, .cke_reset_all a, .cke_reset_all textarea {
+    font: inherit !important;
+    font-size: 12px !important;
+}
+
+.cke_toolgroup {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.cke_toolgroup a.cke_button:last-child:after, .cke_toolgroup a.cke_button.cke_button_disabled:hover:last-child:after, .cke_toolbar_separator, .cke_combo:after {
+    display: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.cke_button, .cke_combo_button {
+    cursor: pointer !important;
+    min-height: 18px !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 8px !important;
+    margin: 0px 5px 10px 0px !important;
+    font-weight: bold !important;
+}
+
+.cke_combo_text, .cke_combo_open {
+    cursor: pointer !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: initial !important;
+    height: auto !important;
+    font-weight: bold !important;
+}
+
+.cke_combo_arrow {
+    margin: -6px 0 0 !important;
+}
+
+/*Ck dialog*/
+.cke_dialog_body {
+    font-weight: bold !important;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--app-wrap-bg-color) !important;
+}
+
+.cke_dialog_title {
+    color: var(--app-color) !important;
+    border-bottom: none !important;
+    padding: 12px 19px 5px 12px !important;
+    background: transparent !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 20px !important;
+}
+
+.cke_dialog_close_button {
+    background: none !important;
+    cursor: pointer !important;
+}
+
+.cke_dialog_close_button:before {
+    content: "x";
+    text-align: center;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    color: var(--app-color);
+    font-size: 20px;
+    margin-top: -5px !important;
+}
+
+.cke_dialog_tabs {
+
+}
+
+a.cke_dialog_tab {
+    background: transparent !important;
+    height: auto !important;
+    border: none !important;
+    font-weight: bolder !important;
+    font-size: 14px !important;
+    color: var(--app-color) !important;
+}
+
+a.cke_dialog_tab_selected {
+    background: none !important;
+    color: var(--app-primary) !important;
+    display: inline-block !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid var(--app-primary) !important;
+}
+
+.cke_dialog_contents {
+    background: var(--app-wrap-bg-color) !important;
+    border: none !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+.cke_reset_all input, .cke_reset_all select {
+    min-height: 25px !important;
+    border-radius: 5px !important;
+    padding: 2px 10px !important;
+}
+
+.ImagePreviewBox {
+    background: var(--app-highlight-color) !important;
+    border: 1px solid #eee !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+}
+
+a.cke_dialog_ui_button {
+    background: var(--app-primary) !important;
+    border: 2px solid var(--app-primary) !important;
+    padding: 3.5px 8px !important;
+}
+
+a.cke_dialog_ui_button_ok:focus, a.cke_dialog_ui_button_ok:active {
+    border: 2px solid var(--app-primary) !important;
+    box-shadow: none !important;
+}
+
+span.cke_dialog_ui_button {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+a.cke_dialog_ui_button_cancel {
+    background: var(--app-danger) !important;
+    border: 2px solid var(--app-danger) !important;
+    padding: 4px 8px !important;
+}
+
+.cke_dialog a.cke_btn_over, .cke_dialog a.cke_btn_locked:hover, .cke_dialog a.cke_btn_locked:focus, .cke_dialog a.cke_btn_locked:active, .cke_dialog a.cke_btn_unlocked:hover, .cke_dialog a.cke_btn_unlocked:focus, .cke_dialog a.cke_btn_unlocked:active, .cke_dialog a.cke_btn_reset:hover, .cke_dialog a.cke_btn_reset:focus, .cke_dialog a.cke_btn_reset:active {
+    border: 2px solid var(--app-primary) !important;
+}
+
+a.cke_smile:focus, a.cke_smile:active, a.cke_specialchar:focus, a.cke_specialchar:active {
+    border-color: var(--app-primary) !important;
+}
+
+.cke_dialog_footer {
+    background: transparent !important;
+    border: none !important;
+    padding-bottom: 5px !important;
+}
