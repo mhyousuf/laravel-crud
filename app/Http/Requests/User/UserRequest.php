@@ -2,13 +2,12 @@
 
 namespace App\Http\Requests\User;
 
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
-use App\Models\User;
 
 class UserRequest extends FormRequest
 {
-
     public function rules()
     {
         return [
@@ -51,13 +50,11 @@ class UserRequest extends FormRequest
         ];
     }
 
-
-        /**
+    /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
         return true;
     }
-
 }

@@ -5,17 +5,16 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Foundation\Auth\Access\Authorizable as AuthorizableTrait;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+
 // use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Image
 {
     use Authenticatable,
-    HasApiTokens,
+        HasApiTokens,
         HasFactory,
         InteractsWithMedia,
         Notifiable;

@@ -2,14 +2,14 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 
 class UserService
 {
     public $model = User::class;
 
-    function persists($attributes = [])
+    public function persists($attributes = [])
     {
         if (! data_get($attributes, 'password')) {
             unset($attributes['password']);
@@ -21,14 +21,13 @@ class UserService
 
         $files = ['image'];
 
-        foreach ($files as $key => $file)
-        {
-            if (isset($attributes[$file])){
+        foreach ($files as $key => $file) {
+            if (isset($attributes[$file])) {
                 $media = $attributes[$file];
 
                 $foldername = 'text_image';
 
-                $name = time()+($key+1).'.'.\Str::slug($media->getClientOriginalExtension());
+                $name = time() + ($key + 1).'.'.\Str::slug($media->getClientOriginalExtension());
 
                 $upload = $media->storeAs($foldername, $name);
 
@@ -43,20 +42,20 @@ class UserService
     {
         $user = User::create($this->persists($attributes));
 
-        if (data_get($attributes, 'nid_front')){
+        if (data_get($attributes, 'nid_front')) {
             $user->addMedia($attributes['nid_front'])->toMediaCollection('nid_front');
         }
 
-        if (data_get($attributes, 'nid_back')){
+        if (data_get($attributes, 'nid_back')) {
             $user->addMedia($attributes['nid_back'])->toMediaCollection('nid_back');
         }
 
-        if (data_get($attributes, 'passport')){
+        if (data_get($attributes, 'passport')) {
             $user->addMedia($attributes['passport'])->toMediaCollection('passport');
         }
     }
 
-    public function update($attributes = [], $user)
+    public function update($attributes, $user)
     {
         if (isset($attributes['image']) && $user->image !== null) {
             Storage::delete($user->image);
@@ -64,15 +63,15 @@ class UserService
 
         $user->update($this->persists($attributes));
 
-        if (data_get($attributes, 'nid_front')){
+        if (data_get($attributes, 'nid_front')) {
             $user->addMedia($attributes['nid_front'])->toMediaCollection('nid_front');
         }
 
-        if (data_get($attributes, 'nid_back')){
+        if (data_get($attributes, 'nid_back')) {
             $user->addMedia($attributes['nid_back'])->toMediaCollection('nid_back');
         }
 
-        if (data_get($attributes, 'passport')){
+        if (data_get($attributes, 'passport')) {
             $user->addMedia($attributes['passport'])->toMediaCollection('passport');
         }
     }
@@ -85,5 +84,4 @@ class UserService
 
         return $user->delete();
     }
-
 }
